@@ -31,8 +31,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .ticker{display:inline-block;animation:tickAnim 24s linear infinite;font-size:0.78rem;font-weight:700;color:#fff;}
 .ticker span{margin:0 40px;}
 @keyframes tickAnim{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* Hero Banner Slider */
+.hero-slider{position:relative;width:100%;overflow:hidden;}
+.slider-container{display:flex;transition:transform 0.5s ease-in-out;}
+.slide{min-width:100%;}
+.slide img{width:100%;max-height:450px;object-fit:cover;display:block;}
+.slider-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;padding:12px 18px;cursor:pointer;border-radius:50%;font-size:1.5rem;z-index:10;transition:0.3s;}
+.slider-btn:hover{background:rgba(26,86,219,0.8);}
+.prev{left:15px;}
+.next{right:15px;}
+.dots{position:absolute;bottom:15px;left:0;right:0;display:flex;justify-content:center;gap:12px;z-index:10;}
+.dot{width:10px;height:10px;background:rgba(255,255,255,0.5);border-radius:50%;cursor:pointer;}
+.dot.active{background:#fff;width:24px;border-radius:20px;}
+
 #home{position:relative;z-index:1;padding-top:68px;}
-.hero-banner img{width:100%;max-height:380px;object-fit:cover;display:block;}
 .hero-text{text-align:center;padding:46px 5% 24px;}
 .hero-badge{display:inline-flex;background:linear-gradient(135deg,rgba(219,234,254,0.9),rgba(255,255,255,0.95));border:1.5px solid rgba(59,130,246,0.3);border-radius:50px;padding:7px 20px;font-size:0.72rem;font-weight:800;color:var(--b1);margin-bottom:22px;}
 .hero-title{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,4rem);font-weight:800;background:linear-gradient(135deg,var(--b2),var(--b1),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
@@ -50,11 +63,6 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .flow-card:hover{transform:translateY(-6px);box-shadow:var(--shadow2);}
 .flow-icon{font-size:2.5rem;margin-bottom:16px;}
 .example-box{background:var(--bg2);border-radius:16px;padding:16px;margin-top:20px;border-left:4px solid var(--green);}
-.proof-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;margin-top:40px;}
-.proof-card{background:var(--surface);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border);transition:0.2s;}
-.proof-card:hover{transform:translateY(-4px);}
-.proof-card img{width:100%;height:180px;object-fit:cover;background:#eef2ff;display:block;}
-.img-label{background:rgba(0,0,0,0.75);color:#fff;font-size:0.7rem;padding:8px 10px;text-align:center;font-family:monospace;word-break:break-all;}
 .table-wrap{overflow-x:auto;margin:30px 0;background:var(--surface);border-radius:24px;padding:20px;box-shadow:var(--shadow);}
 table{width:100%;border-collapse:collapse;}
 th,td{padding:12px 10px;text-align:center;border-bottom:1px solid var(--border);}
@@ -76,6 +84,17 @@ footer{background:var(--text);color:#fff;padding:46px 5% 28px;}
 @keyframes fBounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
 .fade-up{opacity:0;transform:translateY(30px);transition:0.7s;}
 .fade-up.in{opacity:1;transform:translateY(0);}
+
+/* Horizontal scroll gallery for proofs */
+.scroll-gallery{overflow-x:auto;display:flex;gap:20px;padding:20px 10px 30px 10px;scroll-snap-type:x mandatory;}
+.scroll-gallery::-webkit-scrollbar{height:8px;}
+.scroll-gallery::-webkit-scrollbar-track{background:var(--bg2);border-radius:10px;}
+.scroll-gallery::-webkit-scrollbar-thumb{background:var(--b1);border-radius:10px;}
+.gallery-item{flex:0 0 auto;width:280px;scroll-snap-align:start;background:var(--surface);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border);}
+.gallery-item img{width:100%;height:200px;object-fit:cover;display:block;}
+.gallery-label{background:rgba(0,0,0,0.7);color:#fff;font-size:0.65rem;padding:6px;text-align:center;}
+.scroll-hint{text-align:center;margin-top:10px;color:var(--muted);font-size:0.75rem;display:flex;align-items:center;justify-content:center;gap:8px;}
+
 @media(max-width:768px){.nav-links{display:none;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:rgba(255,255,255,0.97);padding:20px;}.nav-links.open{display:flex;}.hamburger{display:flex;}.support-grid{grid-template-columns:1fr;}}
 </style>
 </head>
@@ -84,18 +103,29 @@ footer{background:var(--text);color:#fff;padding:46px 5% 28px;}
 <nav>
   <div class="nav-logo"><a href="#home"><img src="https://i.ibb.co/99sczMNx/x.jpg" alt="OnePay"></a></div>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#usdt-sell">USDT Sell</a></li>
-    <li><a href="#buy-rp">Buy RP</a></li>
-    <li><a href="#proofs">Real Proofs</a></li>
+    <li><a href="#home">Home</a></li><li><a href="#usdt-sell">USDT Sell</a></li><li><a href="#buy-rp">Buy RP</a></li><li><a href="#proofs">Real Proofs</a></li>
     <li><a href="https://land.onexx.top?inviteCode=IyGZ8v" class="nav-cta" target="_blank">💰 Register</a></li>
   </ul>
   <div class="hamburger" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
 
 <div id="home">
-  <div class="hero-banner"><img src="https://i.ibb.co/HfjkBcvQ/x.jpg" alt="OnePay Banner"></div>
+  <!-- Slider Banner -->
+  <div class="hero-slider">
+    <div class="slider-container" id="sliderContainer">
+      <div class="slide"><img src="https://i.ibb.co/rGr5BtrC/x.jpg" alt="Banner 1"></div>
+      <div class="slide"><img src="https://i.ibb.co/35hy8Z7H/x.jpg" alt="Banner 2"></div>
+      <div class="slide"><img src="https://i.ibb.co/YB3CqyCC/x.jpg" alt="Banner 3"></div>
+      <div class="slide"><img src="https://i.ibb.co/G4S5dZ1d/x.jpg" alt="Banner 4"></div>
+      <div class="slide"><img src="https://i.ibb.co/bjyR5mXT/x.jpg" alt="Banner 5"></div>
+    </div>
+    <button class="slider-btn prev" id="prevBtn">❮</button>
+    <button class="slider-btn next" id="nextBtn">❯</button>
+    <div class="dots" id="dotsContainer"></div>
+  </div>
+
   <div class="ticker-wrap"><div class="ticker"><span>⚡ USDT → INR @ ₹105-₹106 Best Rate</span><span>💰 Buy RP & Earn Daily Profit</span><span>✅ Real Payment Proofs attached</span><span>🎁 Register & Start Earning</span></div></div>
+  
   <div class="hero-text fade-up"><div class="hero-badge">🔥 OnePay – Verified Platform with Live Earnings 🔥</div>
     <h1 class="hero-title">USDT → INR → RP → Profit → Bank</h1>
     <p class="hero-sub">Sell USDT at best rate | Buy RP & earn daily commission | Instant withdrawals | Real user proofs below</p>
@@ -127,59 +157,43 @@ footer{background:var(--text);color:#fff;padding:46px 5% 28px;}
 
 <div class="divider"></div>
 
-<!-- ============================================= -->
-<!-- ========== FINAL REAL PROOFS SECTION ========= -->
-<!-- ============================================= -->
+<!-- ========== SCROLLABLE PROOFS GALLERY ========== -->
 <section class="sec" id="proofs"><div class="fade-up"><div class="sec-tag">📸 REAL PROOFS & EARNINGS</div><h2 class="sec-title">Live <span>Payment Proofs</span> – Dashboard Screenshots</h2>
-<p class="sec-desc">नीचे सभी images <strong>OnePay real dashboard</strong> से ली गई हैं। अब ये GitHub upload होंगी और यहाँ दिखेंगी।</p></div>
+<p class="sec-desc">नीचे सभी images OnePay real dashboard से ली गई हैं। ← → swipe करके देखें।</p></div>
 
-<div class="proof-grid fade-up">
-  <!-- 1 -->
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050165.jpg" alt="Daily details 1583.2"><div class="img-label">📆 1000050165.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050169.jpg" alt="Daily income 520.06"><div class="img-label">📆 1000050169.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050170.jpg" alt="Team management 59970"><div class="img-label">👥 1000050170.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050168.jpg" alt="Team management 152030"><div class="img-label">👥 1000050168.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050171.jpg" alt="Daily 307.5"><div class="img-label">📆 1000050171.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050172.jpg" alt="Daily 490.08"><div class="img-label">📆 1000050172.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050173.jpg" alt="Daily 446.21"><div class="img-label">📆 1000050173.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050174.jpg" alt="Daily 750.45"><div class="img-label">📆 1000050174.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050175.jpg" alt="Daily 672.43"><div class="img-label">📆 1000050175.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050176.jpg" alt="Points details"><div class="img-label">💳 1000050176.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050177.jpg" alt="Daily 574.65"><div class="img-label">📆 1000050177.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050178.jpg" alt="Daily 164.73"><div class="img-label">📆 1000050178.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050179.jpg" alt="Daily 206.61"><div class="img-label">📆 1000050179.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050180.jpg" alt="Daily 206.63"><div class="img-label">📆 1000050180.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050181.jpg" alt="Daily 235.3"><div class="img-label">📆 1000050181.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050182.jpg" alt="Daily 610.79"><div class="img-label">📆 1000050182.jpg</div></div>
-
-  <!-- Sell RP records -->
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050166.jpg" alt="Sell RP record 1"><div class="img-label">💰 1000050166.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050167.jpg" alt="Sell RP record 2"><div class="img-label">💰 1000050167.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050183.jpg" alt="Sell RP record 3"><div class="img-label">💰 1000050183.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050184.jpg" alt="Sell RP record 4"><div class="img-label">💰 1000050184.jpg</div></div>
-
-  <!-- Bot image -->
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050154.png" alt="Fire Cash bot"><div class="img-label">🤖 1000050154.png</div></div>
+<div class="scroll-gallery fade-up" id="proofGallery">
+  <!-- All 19 proof images -->
+  <div class="gallery-item"><img src="https://i.ibb.co/35hy8Z7H/x.jpg" alt="Proof 1"><div class="gallery-label">📸 Daily Earnings Proof</div></div>
+  <div class="gallery-item"><img src="https://i.ibb.co/YB3CqyCC/x.jpg" alt="Proof 2"><div class="gallery-label">📸 Team Rebates</div></div>
+  <div class="gallery-item"><img src="https://i.ibb.co/G4S5dZ1d/x.jpg" alt="Proof 3"><div class="gallery-label">📸 Order Revenue</div></div>
+  <div class="gallery-item"><img src="https://i.ibb.co/bjyR5mXT/x.jpg" alt="Proof 4"><div class="gallery-label">📸 Sell RP Record</div></div>
+  <div class="gallery-item"><img src="https://i.ibb.co/gZnhxC3p/x.jpg" alt="Proof 5"><div class="gallery-label">📸 Daily Income</div></div>
+  <div class="gallery-item"><img src="https://i.ibb.co/MxQz0PmK/x.jpg" alt="Proof 6"><div class="gallery-label">📸 Purchase Data</div></div>
+  <div class="gallery-item"><img src="https://i.ibb.co/NnbLJ2wK/x.jpg" alt="Proof 7"><div class="gallery-label">📸 USDT Recharge</div></div>
+  <div class="gallery-item"><img src="https://i.ibb.co/5XTrb4hf/x.jpg" alt="Proof 8"><div class="gallery-label">📸 Team Management</div></div>
+  <div class="gallery-item"><img src="https://i.ibb.co/4RvmR29T/x.jpg" alt="Proof 9"><div class="gallery-label">📸 Points Details</div></div>
+  <div class="gallery-item"><img src="https://i.ibb.co/SDwfmPFn/x.jpg" alt="Proof 10"><div class="gallery-label">📸 Withholding Collection</div></div>
+  <div class="gallery-item"><img src="https://i.ibb.co/qYCJqM99/x.jpg" alt="Proof 11"><div class="gallery-label">📸 Daily Bonus</div></div>
+  <div class="gallery-item"><img src="https://i.ibb.co/wZDQ4GkJ/x.jpg" alt="Proof 12"><div class="gallery-label">📸 Team Rebates</div></div>
+  <div class="gallery-item"><img src="https://i.ibb.co/7J9DcWzs/x.jpg" alt="Proof 13"><div class="gallery-label">📸 Order Completion</div></div>
+  <div class="gallery-item"><img src="https://i.ibb.co/1tBfkMhg/x.jpg" alt="Proof 14"><div class="gallery-label">📸 Activity Rewards</div></div>
+  <div class="gallery-item"><img src="https://i.ibb.co/FbRFDpd9/x.jpg" alt="Proof 15"><div class="gallery-label">📸 Sell RP Success</div></div>
+  <div class="gallery-item"><img src="https://i.ibb.co/ynBvNVgM/x.jpg" alt="Proof 16"><div class="gallery-label">📸 Large Transactions</div></div>
+  <div class="gallery-item"><img src="https://i.ibb.co/PZy4NxhB/x.jpg" alt="Proof 17"><div class="gallery-label">📸 Team Earnings</div></div>
+  <div class="gallery-item"><img src="https://i.ibb.co/wFHbvCY0/x.jpg" alt="Proof 18"><div class="gallery-label">📸 Daily Performance</div></div>
+  <div class="gallery-item"><img src="https://i.ibb.co/mCX17LhR/x.jpg" alt="Proof 19"><div class="gallery-label">📸 Final Dashboard</div></div>
 </div>
-
-<div style="margin-top:30px; background:var(--b5); padding:18px; border-radius:20px; text-align:center;">
-  <strong>📌 GitHub पर upload करने के लिए file names (same as above):</strong><br>
-  <span style="font-size:0.75rem;">1000050165.jpg , 1000050169.jpg , 1000050170.jpg , 1000050168.jpg , 1000050171.jpg , 1000050172.jpg , 1000050173.jpg , 1000050174.jpg , 1000050175.jpg , 1000050176.jpg , 1000050177.jpg , 1000050178.jpg , 1000050179.jpg , 1000050180.jpg , 1000050181.jpg , 1000050182.jpg , 1000050166.jpg , 1000050167.jpg , 1000050183.jpg , 1000050184.jpg , 1000050154.png</span>
-</div>
+<div class="scroll-hint">👉 ← → स्क्रॉल करें सभी प्रूफ देखने के लिए | Total 19+ Real Screenshots</div>
 </section>
 
 <div class="divider"></div>
 
-<!-- CHART AREA (ready for future images) -->
-<section class="sec"><div class="fade-up"><div class="sec-tag">📈 Charts & Analytics (Coming)</div><h2 class="sec-title">Performance <span>Graphs</span> – Daily Growth</h2>
-<p class="sec-desc">यहाँ आप अपने <strong>daily income chart, team growth chart</strong> आदि लगा सकते हैं। नीचे placeholder है।</p>
+<!-- CHART AREA (future) -->
+<section class="sec"><div class="fade-up"><div class="sec-tag">📈 Charts & Analytics</div><h2 class="sec-title">Performance <span>Graphs</span> – Coming Soon</h2>
+<p class="sec-desc">यहाँ आप daily income chart, team growth chart लगा सकते हैं।</p>
 <div class="table-wrap" style="text-align:center; padding:40px;">
   <span style="font-size:3rem;">📊📈</span>
-  <p style="margin-top:12px;">👉 <strong>Chart image name (example):</strong> <code>daily_income_chart.jpg</code> या <code>team_growth.png</code><br>Upload karo aur yahan <code>src</code> update karo.</p>
-  <div style="background:#eef2ff; padding:20px; border-radius:20px; margin-top:15px;">
-    🖼️ <strong>Chart placeholder</strong><br>
-    <img src="https://i.ibb.co/placeholder/chart_placeholder.png" alt="Chart coming soon" style="max-width:100%; height:auto; border-radius:16px;">
-  </div>
+  <p style="margin-top:12px;">🖼️ <strong>Chart placeholder</strong> – अभी जल्द ही update होगा।</p>
 </div>
 </section>
 
@@ -202,6 +216,39 @@ function toggleMenu(){document.getElementById('navLinks').classList.toggle('open
 document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open'));});
 const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:0.1});
 document.querySelectorAll('.fade-up').forEach((el,i)=>{el.style.transitionDelay=(i%5)*0.07+'s';io.observe(el);});
+
+// Banner Slider
+const slides = document.querySelectorAll('.slide');
+const sliderContainer = document.getElementById('sliderContainer');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const dotsContainer = document.getElementById('dotsContainer');
+let currentIndex = 0;
+const totalSlides = slides.length;
+
+function updateSlider() {
+  sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+  document.querySelectorAll('.dot').forEach((dot, idx) => {
+    dot.classList.toggle('active', idx === currentIndex);
+  });
+}
+function createDots() {
+  dotsContainer.innerHTML = '';
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (i === currentIndex) dot.classList.add('active');
+    dot.addEventListener('click', () => { currentIndex = i; updateSlider(); });
+    dotsContainer.appendChild(dot);
+  }
+}
+function nextSlide() { currentIndex = (currentIndex + 1) % totalSlides; updateSlider(); }
+function prevSlide() { currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; updateSlider(); }
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
+setInterval(nextSlide, 5000);
+createDots();
+updateSlider();
 </script>
 </body>
 </html>
