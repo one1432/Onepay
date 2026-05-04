@@ -50,11 +50,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .flow-card:hover{transform:translateY(-6px);box-shadow:var(--shadow2);}
 .flow-icon{font-size:2.5rem;margin-bottom:16px;}
 .example-box{background:var(--bg2);border-radius:16px;padding:16px;margin-top:20px;border-left:4px solid var(--green);}
-.proof-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px;margin-top:40px;}
+.proof-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:20px;margin-top:40px;}
 .proof-card{background:var(--surface);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--border);transition:0.2s;}
 .proof-card:hover{transform:translateY(-4px);}
-.proof-card img{width:100%;height:180px;object-fit:cover;background:#e2e8f0;display:block;}
-.img-label{background:rgba(0,0,0,0.7);color:#fff;font-size:0.65rem;padding:6px 10px;text-align:center;font-family:monospace;}
+.proof-card img{width:100%;height:180px;object-fit:cover;background:#eef2ff;display:block;}
+.img-label{background:rgba(0,0,0,0.75);color:#fff;font-size:0.7rem;padding:8px 10px;text-align:center;font-family:monospace;word-break:break-all;}
 .table-wrap{overflow-x:auto;margin:30px 0;background:var(--surface);border-radius:24px;padding:20px;box-shadow:var(--shadow);}
 table{width:100%;border-collapse:collapse;}
 th,td{padding:12px 10px;text-align:center;border-bottom:1px solid var(--border);}
@@ -84,7 +84,10 @@ footer{background:var(--text);color:#fff;padding:46px 5% 28px;}
 <nav>
   <div class="nav-logo"><a href="#home"><img src="https://i.ibb.co/99sczMNx/x.jpg" alt="OnePay"></a></div>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#home">Home</a></li><li><a href="#usdt-sell">USDT Sell</a></li><li><a href="#buy-rp">Buy RP</a></li><li><a href="#proofs">Real Proofs</a></li>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#usdt-sell">USDT Sell</a></li>
+    <li><a href="#buy-rp">Buy RP</a></li>
+    <li><a href="#proofs">Real Proofs</a></li>
     <li><a href="https://land.onexx.top?inviteCode=IyGZ8v" class="nav-cta" target="_blank">💰 Register</a></li>
   </ul>
   <div class="hamburger" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
@@ -102,97 +105,95 @@ footer{background:var(--text);color:#fff;padding:46px 5% 28px;}
 
 <div class="divider"></div>
 
-<!-- USDT SELL & BUY RP INTRO -->
 <section class="sec" id="usdt-sell"><div class="fade-up"><div class="sec-tag">🔵 WAY 1</div><h2 class="sec-title">USDT SELL – <span>Direct INR in Bank</span></h2><p class="sec-desc">Sell your USDT at high rate ₹105-₹106 and get money instantly in your Bank / UPI.</p></div>
 <div class="flow-cards fade-up"><div class="flow-card"><div class="flow-icon">💸</div><h3>USDT → INR</h3><ul style="margin-top:12px; list-style:none;"><li>✅ Go to "Sell USDT"</li><li>✅ Enter USDT amount</li><li>✅ See INR instantly (₹105-106)</li><li>✅ Send USDT to address</li><li>✅ INR in Bank / UPI</li></ul><div class="example-box"><strong>⚡ Example:</strong> 100 USDT → ₹10,600 (at ₹106 rate)</div></div>
 <div class="flow-card"><div class="flow-icon">📦</div><h3>BUY RP – Earn Daily</h3><ul style="margin-top:12px; list-style:none;"><li>✅ Add INR (sell USDT or add funds)</li><li>✅ Go to "Buy RP"</li><li>✅ Choose order (₹100, ₹500, ₹1000...)</li><li>✅ Click "Receive" → order starts</li><li>✅ Complete order → Profit added</li></ul><div class="example-box"><strong>📈 Profit:</strong> ₹100 order → ₹105 | ₹500 → ₹525 | ₹1000 → ₹1050</div></div></div></section>
 
 <div class="divider"></div>
 
-<!-- REVENUE TABLE + LEVEL SYSTEM -->
-<section class="sec" id="revenue"><div class="fade-up"><div class="sec-tag">📊 Commission Structure</div><h2 class="sec-title">Order Revenue – <span>Per Order & 30 Days</span></h2>
+<section class="sec"><div class="fade-up"><div class="sec-tag">📊 Commission Structure</div><h2 class="sec-title">Order Revenue – <span>Per Order & 30 Days</span></h2>
 <div class="table-wrap"><table><thead><tr><th>Level</th><th>Order Amount</th><th>Commission/Order</th><th>X30 Revenue</th></tr></thead><tbody>
-<tr><td>L1</td><td>₹100</td><td>₹5</td><td class="profit-highlight" style="color:var(--green);">₹150</td></tr>
-<tr><td>L2</td><td>₹300</td><td>₹12</td><td class="profit-highlight">₹360</td></tr>
-<tr><td>L3</td><td>₹500</td><td>₹19</td><td class="profit-highlight">₹570</td></tr>
-<tr><td>L4</td><td>₹1000</td><td>₹34</td><td class="profit-highlight">₹1020</td></tr>
-<tr><td>L5</td><td>₹2000</td><td>₹64</td><td class="profit-highlight">₹1920</td></tr>
-<tr><td>L6</td><td>₹3000</td><td>₹94</td><td class="profit-highlight">₹2820</td></tr>
-<tr><td>L7</td><td>₹5000</td><td>₹154</td><td class="profit-highlight">₹4620</td></tr>
-<tr><td>L8</td><td>₹10000</td><td>₹305</td><td class="profit-highlight">₹9150</td></tr>
+<tr><td>L1</td><td>₹100</td><td>₹5</td><td style="color:#10b981; font-weight:800;">₹150</td></tr>
+<tr><td>L2</td><td>₹300</td><td>₹12</td><td style="color:#10b981;">₹360</td></tr>
+<tr><td>L3</td><td>₹500</td><td>₹19</td><td style="color:#10b981;">₹570</td></tr>
+<tr><td>L4</td><td>₹1000</td><td>₹34</td><td style="color:#10b981;">₹1020</td></tr>
+<tr><td>L5</td><td>₹2000</td><td>₹64</td><td style="color:#10b981;">₹1920</td></tr>
+<tr><td>L6</td><td>₹3000</td><td>₹94</td><td style="color:#10b981;">₹2820</td></tr>
+<tr><td>L7</td><td>₹5000</td><td>₹154</td><td style="color:#10b981;">₹4620</td></tr>
+<tr><td>L8</td><td>₹10000</td><td>₹305</td><td style="color:#10b981;">₹9150</td></tr>
 </tbody></table></div>
-<p style="text-align:center; margin-top:10px;">✅ UPI Compatible: Paytm | Jio | PhonePe | Mobikwik | Freecharge</p>
+<p style="text-align:center;">✅ UPI Compatible: Paytm | Jio | PhonePe | Mobikwik | Freecharge</p>
 </section>
 
 <div class="divider"></div>
 
-<!-- ========== REAL PROOFS SECTION – All images with names & locations ========== -->
-<section class="sec" id="proofs"><div class="fade-up"><div class="sec-tag">📸 REAL PROOFS & EARNINGS</div><h2 class="sec-title">Live <span>Payment Proofs</span> – Daily Income, Sell RP Records, Team Rebates</h2>
-<p class="sec-desc">नीचे सभी screenshots OnePay के real dashboard से लिए गए हैं। Daily income, purchase data, sell RP records aur team rewards ke asli सबूत।</p></div>
+<!-- ============================================= -->
+<!-- ========== FINAL REAL PROOFS SECTION ========= -->
+<!-- ============================================= -->
+<section class="sec" id="proofs"><div class="fade-up"><div class="sec-tag">📸 REAL PROOFS & EARNINGS</div><h2 class="sec-title">Live <span>Payment Proofs</span> – Dashboard Screenshots</h2>
+<p class="sec-desc">नीचे सभी images <strong>OnePay real dashboard</strong> से ली गई हैं। अब ये GitHub upload होंगी और यहाँ दिखेंगी।</p></div>
 
 <div class="proof-grid fade-up">
-  <!-- Daily details images -->
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050165.jpg" alt="Today total income 1583.2"><div class="img-label">📆 daily_details_1583.2_2026.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050169.jpg" alt="Daily income 520.06"><div class="img-label">📆 daily_details_520.06_2026-05-04.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050170.jpg" alt="Team management earnings +59970.15"><div class="img-label">👥 team_management_earnings_59970.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050168.jpg" alt="Team management +152030.62"><div class="img-label">👥 team_management_152030.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050171.jpg" alt="Daily details 307.5"><div class="img-label">📆 daily_details_307.5_2026-05-03.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050172.jpg" alt="Daily details 490.08"><div class="img-label">📆 daily_details_490.08_2026-05-03.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050173.jpg" alt="Daily details 446.21"><div class="img-label">📆 daily_details_446.21_2026-05-03.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050174.jpg" alt="Daily details 750.45"><div class="img-label">📆 daily_details_750.45_2026-05-03.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050175.jpg" alt="Daily details 672.43"><div class="img-label">📆 daily_details_672.43_2026-05-03.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050176.jpg" alt="Points details collection payments"><div class="img-label">💳 points_details_collection.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050177.jpg" alt="Daily details 574.65"><div class="img-label">📆 daily_details_574.65_2026-05-01.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050178.jpg" alt="Daily details 164.73"><div class="img-label">📆 daily_details_164.73_2026-05-02.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050179.jpg" alt="Daily details 206.61"><div class="img-label">📆 daily_details_206.61_2026-05-02.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050180.jpg" alt="Daily details 206.63"><div class="img-label">📆 daily_details_206.63_2026-05-02.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050181.jpg" alt="Daily details 235.3"><div class="img-label">📆 daily_details_235.3_2026.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050182.jpg" alt="Daily details 610.79"><div class="img-label">📆 daily_details_610.79_2026-05-02.jpg</div></div>
+  <!-- 1 -->
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050165.jpg" alt="Daily details 1583.2"><div class="img-label">📆 1000050165.jpg</div></div>
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050169.jpg" alt="Daily income 520.06"><div class="img-label">📆 1000050169.jpg</div></div>
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050170.jpg" alt="Team management 59970"><div class="img-label">👥 1000050170.jpg</div></div>
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050168.jpg" alt="Team management 152030"><div class="img-label">👥 1000050168.jpg</div></div>
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050171.jpg" alt="Daily 307.5"><div class="img-label">📆 1000050171.jpg</div></div>
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050172.jpg" alt="Daily 490.08"><div class="img-label">📆 1000050172.jpg</div></div>
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050173.jpg" alt="Daily 446.21"><div class="img-label">📆 1000050173.jpg</div></div>
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050174.jpg" alt="Daily 750.45"><div class="img-label">📆 1000050174.jpg</div></div>
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050175.jpg" alt="Daily 672.43"><div class="img-label">📆 1000050175.jpg</div></div>
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050176.jpg" alt="Points details"><div class="img-label">💳 1000050176.jpg</div></div>
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050177.jpg" alt="Daily 574.65"><div class="img-label">📆 1000050177.jpg</div></div>
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050178.jpg" alt="Daily 164.73"><div class="img-label">📆 1000050178.jpg</div></div>
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050179.jpg" alt="Daily 206.61"><div class="img-label">📆 1000050179.jpg</div></div>
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050180.jpg" alt="Daily 206.63"><div class="img-label">📆 1000050180.jpg</div></div>
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050181.jpg" alt="Daily 235.3"><div class="img-label">📆 1000050181.jpg</div></div>
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050182.jpg" alt="Daily 610.79"><div class="img-label">📆 1000050182.jpg</div></div>
 
-  <!-- Sell RP record proofs -->
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050166.jpg" alt="Sell RP record +5000 +1000 +10000"><div class="img-label">💰 sell_rp_record_1.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050167.jpg" alt="Sell RP record +500 +30000"><div class="img-label">💰 sell_rp_record_2.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050183.jpg" alt="Sell RP record details"><div class="img-label">💰 sell_rp_record_3.jpg</div></div>
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050184.jpg" alt="Sell RP record +5000 +30000 +20000"><div class="img-label">💰 sell_rp_record_4.jpg</div></div>
+  <!-- Sell RP records -->
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050166.jpg" alt="Sell RP record 1"><div class="img-label">💰 1000050166.jpg</div></div>
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050167.jpg" alt="Sell RP record 2"><div class="img-label">💰 1000050167.jpg</div></div>
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050183.jpg" alt="Sell RP record 3"><div class="img-label">💰 1000050183.jpg</div></div>
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050184.jpg" alt="Sell RP record 4"><div class="img-label">💰 1000050184.jpg</div></div>
 
-  <!-- Additional onboarding / bot image -->
-  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050154.png" alt="Fire Cash bot admin"><div class="img-label">🤖 bot_fire_cash_admin.png</div></div>
+  <!-- Bot image -->
+  <div class="proof-card"><img src="https://i.ibb.co/placeholder/1000050154.png" alt="Fire Cash bot"><div class="img-label">🤖 1000050154.png</div></div>
 </div>
 
-<p style="margin-top:30px; text-align:center; background:var(--b5); padding:16px; border-radius:20px;"><strong>📌 ये सभी images एक-एक करके GitHub पर upload करें और नीचे दिए गए file names के अनुसार replace करें।</strong><br>
-<code style="background:#fff; padding:6px 12px; border-radius:12px;">daily_details_1583.2_2026.jpg , daily_details_520.06_2026-05-04.jpg , team_management_earnings_59970.jpg , team_management_152030.jpg , daily_details_307.5_2026-05-03.jpg , daily_details_490.08_2026-05-03.jpg , daily_details_446.21_2026-05-03.jpg , daily_details_750.45_2026-05-03.jpg , daily_details_672.43_2026-05-03.jpg , points_details_collection.jpg , daily_details_574.65_2026-05-01.jpg , daily_details_164.73_2026-05-02.jpg , daily_details_206.61_2026-05-02.jpg , daily_details_206.63_2026-05-02.jpg , daily_details_235.3_2026.jpg , daily_details_610.79_2026-05-02.jpg , sell_rp_record_1.jpg , sell_rp_record_2.jpg , sell_rp_record_3.jpg , sell_rp_record_4.jpg , bot_fire_cash_admin.png</code></p>
-</section>
-
-<div class="divider"></div>
-
-<!-- ADDITIONAL STATS / DAILY INCOME HIGHLIGHT -->
-<section class="sec"><div class="fade-up"><div class="sec-tag">🏆 Live Performance</div><h2 class="sec-title">Real User <span>Daily Earnings</span> (Screenshots above)</h2>
-<div class="flow-cards" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr));">
-  <div class="flow-card"><div class="flow-icon">📅</div><h3>Today's Income</h3><p class="profit-highlight" style="font-size:1.8rem;">₹520+</p><p>May 4, 2026</p></div>
-  <div class="flow-card"><div class="flow-icon">👥</div><h3>Team Earnings</h3><p class="profit-highlight" style="font-size:1.4rem;">₹59,970 + ₹1,52,030</p><p>Team rebates & commission</p></div>
-  <div class="flow-card"><div class="flow-icon">💸</div><h3>Total Sell RP Volume</h3><p class="profit-highlight" style="font-size:1.2rem;">₹1,37,099+ (single day)</p><p>31 successful orders</p></div>
+<div style="margin-top:30px; background:var(--b5); padding:18px; border-radius:20px; text-align:center;">
+  <strong>📌 GitHub पर upload करने के लिए file names (same as above):</strong><br>
+  <span style="font-size:0.75rem;">1000050165.jpg , 1000050169.jpg , 1000050170.jpg , 1000050168.jpg , 1000050171.jpg , 1000050172.jpg , 1000050173.jpg , 1000050174.jpg , 1000050175.jpg , 1000050176.jpg , 1000050177.jpg , 1000050178.jpg , 1000050179.jpg , 1000050180.jpg , 1000050181.jpg , 1000050182.jpg , 1000050166.jpg , 1000050167.jpg , 1000050183.jpg , 1000050184.jpg , 1000050154.png</span>
 </div>
-<div class="example-box" style="background:var(--b5); text-align:center;"><strong>🔥 सभी प्रूफ ऊपर दिए गए हैं — हर screenshot एक real transaction दिखाता है। 🔥</strong></div>
 </section>
 
 <div class="divider"></div>
 
-<!-- CHART / GRAPH PLACEHOLDER (You can upload later) -->
-<section class="sec"><div class="fade-up"><div class="sec-tag">📈 Upcoming Charts</div><h2 class="sec-title">Performance <span>Graphs & Analytics</span> (Coming Soon)</h2>
-<p class="sec-desc">जल्द ही हम daily income growth, team building charts और order volume graphs यहाँ add करेंगे। आप अपने custom charts भी यहाँ लगा सकते हैं।</p>
-<div class="table-wrap" style="text-align:center; padding:40px;"><span style="font-size:3rem;">📊📈</span><p style="margin-top:12px;">(Chart area – आप यहाँ image डाल सकते हैं: <strong>daily_income_chart.jpg</strong> या <strong>team_growth_chart.png</strong>)</p></div>
+<!-- CHART AREA (ready for future images) -->
+<section class="sec"><div class="fade-up"><div class="sec-tag">📈 Charts & Analytics (Coming)</div><h2 class="sec-title">Performance <span>Graphs</span> – Daily Growth</h2>
+<p class="sec-desc">यहाँ आप अपने <strong>daily income chart, team growth chart</strong> आदि लगा सकते हैं। नीचे placeholder है।</p>
+<div class="table-wrap" style="text-align:center; padding:40px;">
+  <span style="font-size:3rem;">📊📈</span>
+  <p style="margin-top:12px;">👉 <strong>Chart image name (example):</strong> <code>daily_income_chart.jpg</code> या <code>team_growth.png</code><br>Upload karo aur yahan <code>src</code> update karo.</p>
+  <div style="background:#eef2ff; padding:20px; border-radius:20px; margin-top:15px;">
+    🖼️ <strong>Chart placeholder</strong><br>
+    <img src="https://i.ibb.co/placeholder/chart_placeholder.png" alt="Chart coming soon" style="max-width:100%; height:auto; border-radius:16px;">
+  </div>
+</div>
 </section>
 
 <div class="divider"></div>
 
-<!-- SUPPORT SECTION -->
 <div class="support-bg" id="support"><div class="support-inner" style="max-width:1200px; margin:0 auto;"><div class="fade-up"><div class="sec-tag" style="background:rgba(255,255,255,0.2); color:#fff;">💬 24/7 Support</div><h2 class="sec-title" style="color:#fff;">Hum Hain <span style="-webkit-text-fill-color:#93c5fd;">Har Qadam Par</span></h2></div>
 <div class="support-grid fade-up"><div class="sup-card"><div class="sup-ico" style="font-size:2rem;">💬</div><h3>Personal Support</h3><p>Direct Telegram par expert se baat karein. Fast solution 24/7.</p><a href="https://t.me/Hiii_AMAN" class="sup-link" target="_blank">✈️ @Hiii_AMAN</a></div>
 <div class="sup-card"><div class="sup-ico" style="font-size:2rem;">📢</div><h3>Official Channel</h3><p>Daily updates, best rates (₹106), tips aur offers pao!</p><a href="https://t.me/OnePay_SO_Easy" class="sup-link" target="_blank">✈️ Join OnePay Channel</a></div></div></div></div>
 
-<div id="join" style="text-align:center; padding:70px 5%; background:var(--bg);"><div class="sec-tag" style="display:inline-block;">🚀 Limited Offer</div><h2>Aaj Hi Join Karein aur <span style="color:var(--green);">Real Earnings</span> Start Karein!</h2><p>USDT sell karein, RP se profit karein, aur direct bank mein paisa receive karein. हजारों यूज़र्स पहले से कमा रहे हैं।</p><div class="cta-btns" style="display:flex; gap:18px; justify-content:center; margin-top:30px;"><a href="https://land.onexx.top?inviteCode=IyGZ8v" class="btn-blue" target="_blank">💰 Register Now (Invite: IyGZ8v)</a><a href="https://t.me/OnePay_SO_Easy" class="btn-tg" target="_blank">✈️ Telegram Channel</a></div></div>
+<div id="join" style="text-align:center; padding:70px 5%; background:var(--bg);"><div class="sec-tag" style="display:inline-block;">🚀 Limited Offer</div><h2>Aaj Hi Join Karein aur <span style="color:var(--green);">Real Earnings</span> Start Karein!</h2>
+<p>USDT sell karein, RP se profit karein, aur direct bank mein paisa receive karein। हजारों यूज़र्स पहले से कमा रहे हैं।</p>
+<div class="cta-btns" style="display:flex; gap:18px; justify-content:center; margin-top:30px;"><a href="https://land.onexx.top?inviteCode=IyGZ8v" class="btn-blue" target="_blank">💰 Register Now (Invite: IyGZ8v)</a><a href="https://t.me/OnePay_SO_Easy" class="btn-tg" target="_blank">✈️ Telegram Channel</a></div></div>
 
-<footer><div class="footer-inner"><div class="footer-brand"><img src="https://i.ibb.co/99sczMNx/x.jpg" alt="OnePay"><p>India's fastest USDT to INR exchange + Buy RP earning platform. Real proofs attached.</p></div><div class="fcol"><h4>Quick Links</h4><ul><li><a href="#usdt-sell">USDT Sell</a></li><li><a href="#buy-rp">Buy RP</a></li><li><a href="#proofs">Real Proofs</a></li><li><a href="#revenue">Revenue Table</a></li></ul></div><div class="fcol"><h4>Support</h4><ul><li><a href="https://t.me/Hiii_AMAN">Telegram Support</a></li><li><a href="https://t.me/OnePay_SO_Easy">Official Channel</a></li></ul></div></div><div class="footer-btm" style="max-width:1200px; margin:28px auto 0; text-align:center; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px;"><p>© 2025 OnePay — USDT to INR & RP Earning Platform. All proofs are real user dashboards.</p></div></footer>
+<footer><div class="footer-inner"><div class="footer-brand"><img src="https://i.ibb.co/99sczMNx/x.jpg" alt="OnePay"><p>India's fastest USDT to INR exchange + Buy RP earning platform.</p></div><div class="fcol"><h4>Quick Links</h4><ul><li><a href="#usdt-sell">USDT Sell</a></li><li><a href="#buy-rp">Buy RP</a></li><li><a href="#proofs">Real Proofs</a></li></ul></div><div class="fcol"><h4>Support</h4><ul><li><a href="https://t.me/Hiii_AMAN">Telegram Support</a></li><li><a href="https://t.me/OnePay_SO_Easy">Official Channel</a></li></ul></div></div><div class="footer-btm" style="max-width:1200px; margin:28px auto 0; text-align:center; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px;"><p>© 2025 OnePay — USDT to INR & RP Earning Platform. Real dashboard proofs attached.</p></div></footer>
 
 <div class="float-btns"><a href="https://t.me/Hiii_AMAN" class="f-tg" target="_blank">💬 Support</a><a href="https://land.onexx.top?inviteCode=IyGZ8v" class="f-sell" target="_blank">💰 Register</a></div>
 
@@ -203,4 +204,4 @@ const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isInterse
 document.querySelectorAll('.fade-up').forEach((el,i)=>{el.style.transitionDelay=(i%5)*0.07+'s';io.observe(el);});
 </script>
 </body>
-</html>í
+</html>
