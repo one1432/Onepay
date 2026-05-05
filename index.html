@@ -19,10 +19,10 @@
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
 body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
 body::before{content:'';position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse 70% 50% at 10% 10%,rgba(96,165,250,0.2) 0%,transparent 60%),radial-gradient(ellipse 60% 60% at 90% 90%,rgba(30,64,175,0.13) 0%,transparent 60%),radial-gradient(ellipse 80% 80% at 50% 50%,rgba(240,244,255,1) 0%,var(--bg) 100%);pointer-events:none;}
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px;box-shadow:0 2px 20px rgba(26,86,219,0.07);}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.95);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px;box-shadow:0 2px 20px rgba(26,86,219,0.07);}
 .nav-logo img{height:40px;object-fit:contain;}
 .nav-links{display:flex;gap:0;list-style:none;}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:0.79rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:8px 12px;border-radius:8px;transition:all 0.25s;}
+.nav-links a{color:var(--text2);text-decoration:none;font-size:0.79rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:8px 12px;border-radius:8px;transition:all 0.25s;}
 .nav-links a:hover{color:var(--b1);background:var(--b5);}
 .nav-cta{background:linear-gradient(135deg,var(--b1),var(--accent))!important;color:#fff!important;border-radius:10px!important;padding:9px 20px!important;box-shadow:0 4px 18px rgba(26,86,219,0.35);}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
@@ -43,19 +43,23 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255
 .sec{position:relative;z-index:1;padding:70px 5%;max-width:1200px;margin:0 auto;}
 .divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);}
 .sec-tag{display:inline-block;font-size:0.71rem;font-weight:800;background:var(--b5);border-radius:50px;padding:5px 16px;margin-bottom:14px;color:var(--b1);}
-.sec-title{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,4vw,2.5rem);font-weight:800;margin-bottom:14px;}
+.sec-title{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,4vw,2.5rem);font-weight:800;margin-bottom:14px;color:var(--text);}
 .sec-title span{background:linear-gradient(135deg,var(--b1),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.sec-desc{color:var(--text2);}
 .flow-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin:40px 0;}
 .flow-card{background:var(--surface);border-radius:24px;padding:32px 24px;box-shadow:var(--shadow);border:1px solid var(--border);transition:0.3s;}
 .flow-card:hover{transform:translateY(-6px);box-shadow:var(--shadow2);}
+.flow-card h3{color:var(--text);}
+.flow-card p,.flow-card li{color:var(--text2);}
 .flow-icon{font-size:2.5rem;margin-bottom:16px;}
-.example-box{background:var(--bg2);border-radius:16px;padding:16px;margin-top:20px;border-left:4px solid var(--green);}
+.example-box{background:var(--bg2);border-radius:16px;padding:16px;margin-top:20px;border-left:4px solid var(--green);color:var(--text2);}
 .table-wrap{overflow-x:auto;margin:30px 0;background:var(--surface);border-radius:24px;padding:20px;box-shadow:var(--shadow);}
 table{width:100%;border-collapse:collapse;}
-th,td{padding:12px 10px;text-align:center;border-bottom:1px solid var(--border);}
+th,td{padding:12px 10px;text-align:center;border-bottom:1px solid var(--border);color:var(--text);}
 th{background:var(--b5);color:var(--b1);font-weight:800;}
 .support-bg{background:linear-gradient(135deg,var(--b2),var(--b1));padding:65px 5%;}
 .support-bg .sec-title{color:#fff;}
+.support-bg .sec-desc{color:#bfdbfe;}
 .support-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:1200px;margin:0 auto;}
 .sup-card{background:rgba(255,255,255,0.11);border-radius:20px;padding:30px;backdrop-filter:blur(12px);}
 .sup-card h3{color:#fff;margin-bottom:8px;}
@@ -64,7 +68,9 @@ th{background:var(--b5);color:var(--b1);font-weight:800;}
 footer{background:var(--text);color:#fff;padding:46px 5% 28px;}
 .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;}
 .footer-brand img{height:32px;filter:brightness(0) invert(1);}
-.fcol a{color:#94a3b8;text-decoration:none;font-size:0.8rem;}
+.fcol h4{color:#94a3b8;}
+.fcol a{color:#cbd5e1;text-decoration:none;font-size:0.8rem;}
+.fcol a:hover{color:#60a5fa;}
 .float-btns{position:fixed;bottom:26px;right:20px;z-index:999;display:flex;flex-direction:column;gap:12px;}
 .float-btns a{display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--b1),var(--accent));color:#fff;padding:12px 22px;border-radius:50px;text-decoration:none;font-weight:800;animation:fBounce 2s infinite;}
 .f-tg{background:linear-gradient(135deg,#0088cc,#00b4d8);}
@@ -123,7 +129,7 @@ footer{background:var(--text);color:#fff;padding:46px 5% 28px;}
 
 <section class="sec"><div class="fade-up"><div class="sec-tag">📊 Commission Structure</div><h2 class="sec-title">Order Revenue – <span>Per Order & 30 Days</span></h2>
 <div class="table-wrap"><table><thead><tr><th>Level</th><th>Order Amount</th><th>Commission/Order</th><th>X30 Revenue</th></tr></thead><tbody>
-<tr><td>L1</td><td>₹100</td><td>₹5</td><td style="color:#10b981;">₹150</td></tr>
+<tr><td>L1</td><td>₹100</td><td>₹5</td><td style="color:#10b981; font-weight:800;">₹150</td></tr>
 <tr><td>L2</td><td>₹300</td><td>₹12</td><td style="color:#10b981;">₹360</td></tr>
 <tr><td>L3</td><td>₹500</td><td>₹19</td><td style="color:#10b981;">₹570</td></tr>
 <tr><td>L4</td><td>₹1000</td><td>₹34</td><td style="color:#10b981;">₹1020</td></tr>
@@ -132,7 +138,7 @@ footer{background:var(--text);color:#fff;padding:46px 5% 28px;}
 <tr><td>L7</td><td>₹5000</td><td>₹154</td><td style="color:#10b981;">₹4620</td></tr>
 <tr><td>L8</td><td>₹10000</td><td>₹305</td><td style="color:#10b981;">₹9150</td></tr>
 </tbody></table></div>
-<p style="text-align:center;">✅ UPI Compatible: Paytm | Jio | PhonePe | Mobikwik | Freecharge</p>
+<p style="text-align:center; color:var(--text2);">✅ UPI Compatible: Paytm | Jio | PhonePe | Mobikwik | Freecharge</p>
 </section>
 
 <div class="divider"></div>
@@ -177,7 +183,7 @@ footer{background:var(--text);color:#fff;padding:46px 5% 28px;}
 
 <section class="sec"><div class="fade-up"><div class="sec-tag">📈 Charts & Analytics</div><h2 class="sec-title">Performance <span>Graphs</span> – Coming Soon</h2>
 <p class="sec-desc">यहाँ आप daily income chart, team growth chart लगा सकते हैं।</p>
-<div class="table-wrap" style="text-align:center; padding:40px;"><span style="font-size:3rem;">📊📈</span><p style="margin-top:12px;">🖼️ <strong>Chart placeholder</strong> – जल्द ही update होगा।</p></div>
+<div class="table-wrap" style="text-align:center; padding:40px;"><span style="font-size:3rem;">📊📈</span><p style="margin-top:12px; color:var(--text2);">🖼️ <strong>Chart placeholder</strong> – जल्द ही update होगा।</p></div>
 </section>
 
 <div class="divider"></div>
@@ -186,11 +192,11 @@ footer{background:var(--text);color:#fff;padding:46px 5% 28px;}
 <div class="support-grid fade-up"><div class="sup-card"><div class="sup-ico" style="font-size:2rem;">💬</div><h3>Personal Support</h3><p>Direct Telegram par expert se baat karein. Fast solution 24/7.</p><a href="https://t.me/Hiii_AMAN" class="sup-link" target="_blank">✈️ @Hiii_AMAN</a></div>
 <div class="sup-card"><div class="sup-ico" style="font-size:2rem;">📢</div><h3>Official Channel</h3><p>Daily updates, best rates (₹106), tips aur offers pao!</p><a href="https://t.me/OnePay_SO_Easy" class="sup-link" target="_blank">✈️ Join OnePay Channel</a></div></div></div></div>
 
-<div id="join" style="text-align:center; padding:70px 5%; background:var(--bg);"><div class="sec-tag" style="display:inline-block;">🚀 Limited Offer</div><h2>Aaj Hi Join Karein aur <span style="color:var(--green);">Real Earnings</span> Start Karein!</h2>
-<p>USDT sell karein, RP se profit karein, aur direct bank mein paisa receive karein। हजारों यूज़र्स पहले से कमा रहे हैं।</p>
+<div id="join" style="text-align:center; padding:70px 5%; background:var(--bg);"><div class="sec-tag" style="display:inline-block;">🚀 Limited Offer</div><h2 style="color:var(--text);">Aaj Hi Join Karein aur <span style="color:var(--green);">Real Earnings</span> Start Karein!</h2>
+<p style="color:var(--text2);">USDT sell karein, RP se profit karein, aur direct bank mein paisa receive karein। हजारों यूज़र्स पहले से कमा रहे हैं।</p>
 <div class="cta-btns" style="display:flex; gap:18px; justify-content:center; margin-top:30px;"><a href="https://land.onexx.top?inviteCode=IyGZ8v" class="btn-blue" target="_blank">💰 Register Now (Invite: IyGZ8v)</a><a href="https://t.me/OnePay_SO_Easy" class="btn-tg" target="_blank">✈️ Telegram Channel</a></div></div>
 
-<footer><div class="footer-inner"><div class="footer-brand"><img src="https://i.ibb.co/99sczMNx/x.jpg" alt="OnePay"><p>India's fastest USDT to INR exchange + Buy RP earning platform.</p></div><div class="fcol"><h4>Quick Links</h4><ul><li><a href="#usdt-sell">USDT Sell</a></li><li><a href="#buy-rp">Buy RP</a></li><li><a href="#proofs">Real Proofs</a></li></ul></div><div class="fcol"><h4>Support</h4><ul><li><a href="https://t.me/Hiii_AMAN">Telegram Support</a></li><li><a href="https://t.me/OnePay_SO_Easy">Official Channel</a></li></ul></div></div><div class="footer-btm" style="max-width:1200px; margin:28px auto 0; text-align:center; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px;"><p>© 2025 OnePay — USDT to INR & RP Earning Platform. Real dashboard proofs attached.</p></div></footer>
+<footer><div class="footer-inner"><div class="footer-brand"><img src="https://i.ibb.co/99sczMNx/x.jpg" alt="OnePay"><p style="color:#94a3b8;">India's fastest USDT to INR exchange + Buy RP earning platform.</p></div><div class="fcol"><h4>Quick Links</h4><ul><li><a href="#usdt-sell">USDT Sell</a></li><li><a href="#buy-rp">Buy RP</a></li><li><a href="#proofs">Real Proofs</a></li></ul></div><div class="fcol"><h4>Support</h4><ul><li><a href="https://t.me/Hiii_AMAN">Telegram Support</a></li><li><a href="https://t.me/OnePay_SO_Easy">Official Channel</a></li></ul></div></div><div class="footer-btm" style="max-width:1200px; margin:28px auto 0; text-align:center; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px;"><p style="color:#64748b;">© 2025 OnePay — USDT to INR & RP Earning Platform. Real dashboard proofs attached.</p></div></footer>
 
 <div class="float-btns"><a href="https://t.me/Hiii_AMAN" class="f-tg" target="_blank">💬 Support</a><a href="https://land.onexx.top?inviteCode=IyGZ8v" class="f-sell" target="_blank">💰 Register</a></div>
 
