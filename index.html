@@ -1,240 +1,616 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
-<title>OnePay – USDT to INR | Buy RP Earn Daily | Real Proofs</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#f0f4ff;--bg2:#e6edfa;--bg3:#d8e5ff;
-  --surface:#ffffff;--surface2:rgba(255,255,255,0.85);
-  --b1:#1a56db;--b2:#1e40af;--b3:#3b82f6;--b4:#60a5fa;--b5:#dbeafe;
-  --accent:#0ea5e9;--green:#10b981;--red:#ef4444;--gold:#f59e0b;
-  --text:#0f172a;--text2:#334155;--muted:#64748b;
-  --border:rgba(59,130,246,0.18);
-  --shadow:0 4px 30px rgba(26,86,219,0.1);
-  --shadow2:0 20px 60px rgba(26,86,219,0.18);
-}
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;}
-body::before{content:'';position:fixed;inset:0;z-index:0;background:radial-gradient(ellipse 70% 50% at 10% 10%,rgba(96,165,250,0.2) 0%,transparent 60%),radial-gradient(ellipse 60% 60% at 90% 90%,rgba(30,64,175,0.13) 0%,transparent 60%),radial-gradient(ellipse 80% 80% at 50% 50%,rgba(240,244,255,1) 0%,var(--bg) 100%);pointer-events:none;}
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:68px;box-shadow:0 2px 20px rgba(26,86,219,0.07);}
-.nav-logo img{height:40px;object-fit:contain;}
-.nav-links{display:flex;gap:0;list-style:none;}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:0.79rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:8px 12px;border-radius:8px;transition:all 0.25s;}
-.nav-links a:hover{color:var(--b1);background:var(--b5);}
-.nav-cta{background:linear-gradient(135deg,var(--b1),var(--accent))!important;color:#fff!important;border-radius:10px!important;padding:9px 20px!important;box-shadow:0 4px 18px rgba(26,86,219,0.35);}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;}
-.hamburger span{width:24px;height:2px;background:var(--b1);border-radius:2px;}
-.ticker-wrap{background:linear-gradient(90deg,var(--b1),var(--b2),var(--b1));padding:10px 0;overflow:hidden;white-space:nowrap;}
-.ticker{display:inline-block;animation:tickAnim 24s linear infinite;font-size:0.78rem;font-weight:700;color:#fff;}
-.ticker span{margin:0 40px;}
-@keyframes tickAnim{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
-#home{position:relative;z-index:1;padding-top:68px;}
-.hero-banner img{width:100%;max-height:420px;object-fit:cover;display:block;}
-.hero-text{text-align:center;padding:46px 5% 24px;}
-.hero-badge{display:inline-flex;background:linear-gradient(135deg,rgba(219,234,254,0.9),rgba(255,255,255,0.95));border:1.5px solid rgba(59,130,246,0.3);border-radius:50px;padding:7px 20px;font-size:0.72rem;font-weight:800;color:var(--b1);margin-bottom:22px;}
-.hero-title{font-family:'Syne',sans-serif;font-size:clamp(2rem,5vw,4rem);font-weight:800;background:linear-gradient(135deg,var(--b2),var(--b1),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.hero-sub{font-size:1rem;color:var(--muted);max-width:620px;margin:0 auto 32px;}
-.btn-blue,.btn-tg{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--b1),var(--accent));color:#fff;text-decoration:none;font-weight:800;padding:14px 32px;border-radius:14px;box-shadow:0 8px 28px rgba(26,86,219,0.38);transition:0.3s;}
-.btn-tg{background:linear-gradient(135deg,#0088cc,var(--accent));}
-.btn-blue:hover,.btn-tg:hover{transform:translateY(-3px);}
-.sec{position:relative;z-index:1;padding:70px 5%;max-width:1200px;margin:0 auto;}
-.divider{width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);}
-.sec-tag{display:inline-block;font-size:0.71rem;font-weight:800;background:var(--b5);border-radius:50px;padding:5px 16px;margin-bottom:14px;color:var(--b1);}
-.sec-title{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,4vw,2.5rem);font-weight:800;margin-bottom:14px;}
-.sec-title span{background:linear-gradient(135deg,var(--b1),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.flow-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin:40px 0;}
-.flow-card{background:var(--surface);border-radius:24px;padding:32px 24px;box-shadow:var(--shadow);border:1px solid var(--border);transition:0.3s;}
-.flow-card:hover{transform:translateY(-6px);box-shadow:var(--shadow2);}
-.flow-icon{font-size:2.5rem;margin-bottom:16px;}
-.example-box{background:var(--bg2);border-radius:16px;padding:16px;margin-top:20px;border-left:4px solid var(--green);}
-.table-wrap{overflow-x:auto;margin:30px 0;background:var(--surface);border-radius:24px;padding:20px;box-shadow:var(--shadow);}
-table{width:100%;border-collapse:collapse;}
-th,td{padding:12px 10px;text-align:center;border-bottom:1px solid var(--border);}
-th{background:var(--b5);color:var(--b1);font-weight:800;}
-.support-bg{background:linear-gradient(135deg,var(--b2),var(--b1));padding:65px 5%;}
-.support-bg .sec-title{color:#fff;}
-.support-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:1200px;margin:0 auto;}
-.sup-card{background:rgba(255,255,255,0.11);border-radius:20px;padding:30px;backdrop-filter:blur(12px);}
-.sup-card h3{color:#fff;margin-bottom:8px;}
-.sup-card p{color:#bfdbfe;}
-.sup-link{display:inline-flex;background:#fff;color:var(--b1);padding:10px 22px;border-radius:40px;text-decoration:none;font-weight:800;margin-top:12px;}
-footer{background:var(--text);color:#fff;padding:46px 5% 28px;}
-.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;}
-.footer-brand img{height:32px;filter:brightness(0) invert(1);}
-.fcol a{color:#94a3b8;text-decoration:none;font-size:0.8rem;}
-.float-btns{position:fixed;bottom:26px;right:20px;z-index:999;display:flex;flex-direction:column;gap:12px;}
-.float-btns a{display:flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--b1),var(--accent));color:#fff;padding:12px 22px;border-radius:50px;text-decoration:none;font-weight:800;animation:fBounce 2s infinite;}
-.f-tg{background:linear-gradient(135deg,#0088cc,#00b4d8);}
-@keyframes fBounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
-.fade-up{opacity:0;transform:translateY(30px);transition:0.7s;}
-.fade-up.in{opacity:1;transform:translateY(0);}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>OnePay – USDT to INR | Buy RP Earn | Fast & Secure</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* PROOF CAROUSEL - PHONE SIZE + AUTO SLIDE */
-.proof-carousel-section{background:var(--bg2);border-radius:32px;padding:30px 20px;margin:40px 0;}
-.carousel-container{position:relative;max-width:500px;margin:0 auto;border-radius:28px;overflow:hidden;box-shadow:var(--shadow2);}
-.carousel-slides{display:flex;transition:transform 0.5s ease-in-out;}
-.carousel-slide{min-width:100%;}
-.carousel-slide img{width:100%;height:auto;max-height:550px;object-fit:contain;background:#000;display:block;}
-.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.6);color:#fff;border:none;width:40px;height:40px;border-radius:50%;font-size:1.8rem;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center;}
-.carousel-btn:hover{background:var(--b1);}
-.prev-proof{left:10px;}
-.next-proof{right:10px;}
-.carousel-dots{display:flex;justify-content:center;gap:10px;margin-top:18px;}
-.carousel-dot{width:10px;height:10px;background:rgba(0,0,0,0.3);border-radius:50%;cursor:pointer;}
-.carousel-dot.active{background:var(--b1);width:24px;border-radius:20px;}
-.proof-label{text-align:center;margin-top:12px;font-size:0.8rem;color:var(--b1);font-weight:600;}
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #000000;  /* deep black background - fixed white issue */
+            color: #e5e7eb;       /* light gray text for readability */
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
 
-@media(max-width:768px){.nav-links{display:none;flex-direction:column;position:absolute;top:68px;left:0;right:0;background:rgba(255,255,255,0.97);padding:20px;}.nav-links.open{display:flex;}.hamburger{display:flex;}.support-grid{grid-template-columns:1fr;}}
-</style>
+        /* main container */
+        .app-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #000000;
+            min-height: 100vh;
+            position: relative;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+
+        /* ========= status bar style (matching original vibe but dark) ========= */
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 20px 6px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #cccccc;
+            background: #000000;
+            border-bottom: 1px solid #1e1e2f;
+        }
+
+        /* header / navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            background: #000000;
+            border-bottom: 1px solid #1e1e2f;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: baseline;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 22px;
+            background: linear-gradient(135deg, #FBBF24, #F59E0B);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.3px;
+        }
+
+        .tagline {
+            font-size: 12px;
+            background: #1f1f2e;
+            padding: 4px 10px;
+            border-radius: 20px;
+            color: #FCD34D;
+            font-weight: 500;
+            background: #1c1c2a;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #e2e8f0;
+            font-weight: 600;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #F59E0B;
+        }
+
+        /* Hero / banner section */
+        .hero {
+            padding: 32px 20px 20px;
+            text-align: center;
+            background: #000000;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #1e293b;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #FBBF24;
+            margin-bottom: 16px;
+            border: 1px solid #2d3a4e;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            background: linear-gradient(120deg, #FFFFFF, #FBBF24);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            color: #9ca3af;
+            margin-bottom: 24px;
+            font-size: 15px;
+        }
+
+        .rate-card {
+            background: #0a0a0f;
+            border-radius: 28px;
+            padding: 24px 16px;
+            border: 1px solid #2a2a3a;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+            margin-bottom: 24px;
+        }
+
+        .rate-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #9ca3af;
+            margin-bottom: 8px;
+        }
+
+        .dynamic-rate {
+            font-size: 42px;
+            font-weight: 800;
+            color: #FBBF24;
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .dynamic-rate span {
+            font-size: 18px;
+            color: #9ca3af;
+            font-weight: 500;
+        }
+
+        .rate-note {
+            font-size: 13px;
+            color: #6b7280;
+            margin-top: 10px;
+        }
+
+        /* buttons */
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin: 24px 0 16px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(95deg, #F59E0B, #D97706);
+            border: none;
+            padding: 14px 28px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 16px;
+            color: #0f0f1a;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+            text-decoration: none;
+            box-shadow: 0 5px 12px rgba(245,158,11,0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(95deg, #FBBF24, #F59E0B);
+            box-shadow: 0 10px 20px rgba(245,158,11,0.4);
+        }
+
+        .btn-outline-light {
+            background: transparent;
+            border: 1.5px solid #3f3f55;
+            padding: 14px 28px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 16px;
+            color: #e2e8f0;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.2s;
+        }
+
+        .btn-outline-light:hover {
+            border-color: #F59E0B;
+            color: #F59E0B;
+            background: rgba(245,158,11,0.05);
+        }
+
+        /* channel promo card - BLACK background fix */
+        .promo-card {
+            background: #0c0c14;
+            border-radius: 24px;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #2a2a3a;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: 0.2s;
+        }
+
+        .promo-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .telegram-icon {
+            background: #1f2a3e;
+            width: 44px;
+            height: 44px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #FBBF24;
+        }
+
+        .promo-title {
+            font-weight: 800;
+            font-size: 18px;
+            color: white;
+        }
+
+        .promo-desc {
+            color: #b9c3d4;
+            font-size: 14px;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+
+        .chip-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 15px 0 10px;
+        }
+
+        .chip {
+            background: #1a1a2a;
+            padding: 5px 14px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #FCD34D;
+            border: 1px solid #334155;
+        }
+
+        .join-channel-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #1e293b;
+            padding: 10px 22px;
+            border-radius: 40px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 8px;
+            transition: 0.2s;
+            border: 1px solid #475569;
+        }
+
+        .join-channel-btn i {
+            color: #FBBF24;
+        }
+
+        .join-channel-btn:hover {
+            background: #2d3a4e;
+            border-color: #F59E0B;
+        }
+
+        /* 2-column feature */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 30px 0;
+        }
+
+        .feature-item {
+            background: #0c0c14;
+            padding: 18px 12px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #262636;
+        }
+
+        .feature-item i {
+            font-size: 28px;
+            color: #FBBF24;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        .feature-item h4 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #f3f4f6;
+        }
+
+        .feature-item p {
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        /* steps section */
+        .steps-section {
+            margin: 32px 0;
+        }
+
+        .step-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #0c0c14;
+            padding: 16px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            border: 1px solid #252539;
+        }
+
+        .step-num {
+            width: 38px;
+            height: 38px;
+            background: #F59E0B;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 20px;
+            color: #0a0a0f;
+            flex-shrink: 0;
+        }
+
+        .step-text {
+            font-weight: 500;
+            font-size: 15px;
+            color: #e2e8f0;
+        }
+
+        .step-small {
+            font-size: 13px;
+            color: #8a99b0;
+            margin-top: 3px;
+        }
+
+        /* FAQ / Footer */
+        .faq-section {
+            background: #08080e;
+            border-radius: 24px;
+            padding: 20px;
+            margin: 30px 0 20px;
+            border: 1px solid #2a2a3a;
+        }
+
+        .faq-q {
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #FBBF24;
+            font-size: 16px;
+        }
+
+        .faq-a {
+            font-size: 14px;
+            color: #b9c3d4;
+            margin-bottom: 18px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 28px 20px 40px;
+            border-top: 1px solid #1e1e2e;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        .footer a {
+            color: #FBBF24;
+            text-decoration: none;
+        }
+
+        hr {
+            border-color: #262636;
+            margin: 12px 0;
+        }
+
+        /* responsiveness */
+        @media (max-width: 450px) {
+            .navbar {
+                flex-direction: column;
+                gap: 12px;
+                align-items: flex-start;
+            }
+            .nav-links {
+                width: 100%;
+                justify-content: flex-start;
+                gap: 24px;
+            }
+            .dynamic-rate {
+                font-size: 34px;
+            }
+            .btn-primary, .btn-outline-light {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+
+        /* white backgrounds forced to black — fix any legacy */
+        div, section, header, main, footer, .app-container, body {
+            background-color: #000000;
+        }
+        .app-container {
+            background: #000000;
+        }
+        .promo-card, .feature-item, .step-row, .faq-section, .rate-card {
+            background: #0c0c14; /* deep dark cards but not white */
+        }
+    </style>
 </head>
 <body>
-
-<nav>
-  <div class="nav-logo"><a href="#home"><img src="https://i.ibb.co/99sczMNx/x.jpg" alt="OnePay"></a></div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#home">Home</a></li><li><a href="#usdt-sell">USDT Sell</a></li><li><a href="#buy-rp">Buy RP</a></li><li><a href="#proofs">Real Proofs</a></li>
-    <li><a href="https://land.onexx.top?inviteCode=IyGZ8v" class="nav-cta" target="_blank">💰 Register</a></li>
-  </ul>
-  <div class="hamburger" id="ham" onclick="toggleMenu()"><span></span><span></span><span></span></div>
-</nav>
-
-<div id="home">
-  <div class="hero-banner">
-    <img src="https://i.ibb.co/rGr5BtrC/x.jpg" alt="OnePay Main Banner">
-  </div>
-  <div class="ticker-wrap"><div class="ticker"><span>⚡ USDT → INR @ ₹105-₹106 Best Rate</span><span>💰 Buy RP & Earn Daily Profit</span><span>✅ Real Payment Proofs attached</span><span>🎁 Register & Start Earning</span></div></div>
-  <div class="hero-text fade-up"><div class="hero-badge">🔥 OnePay – Verified Platform with Live Earnings 🔥</div>
-    <h1 class="hero-title">USDT → INR → RP → Profit → Bank</h1>
-    <p class="hero-sub">Sell USDT at best rate | Buy RP & earn daily commission | Instant withdrawals | Real user proofs below</p>
-    <div class="hero-buttons"><a href="https://land.onexx.top?inviteCode=IyGZ8v" class="btn-blue" target="_blank">🚀 Register Now</a><a href="https://t.me/OnePay_SO_Easy" class="btn-tg" target="_blank">✈️ Join Channel</a></div>
-  </div>
-</div>
-
-<div class="divider"></div>
-
-<section class="sec" id="usdt-sell"><div class="fade-up"><div class="sec-tag">🔵 WAY 1</div><h2 class="sec-title">USDT SELL – <span>Direct INR in Bank</span></h2><p class="sec-desc">Sell your USDT at high rate ₹105-₹106 and get money instantly in your Bank / UPI.</p></div>
-<div class="flow-cards fade-up"><div class="flow-card"><div class="flow-icon">💸</div><h3>USDT → INR</h3><ul style="margin-top:12px; list-style:none;"><li>✅ Go to "Sell USDT"</li><li>✅ Enter USDT amount</li><li>✅ See INR instantly (₹105-106)</li><li>✅ Send USDT to address</li><li>✅ INR in Bank / UPI</li></ul><div class="example-box"><strong>⚡ Example:</strong> 100 USDT → ₹10,600 (at ₹106 rate)</div></div>
-<div class="flow-card"><div class="flow-icon">📦</div><h3>BUY RP – Earn Daily</h3><ul style="margin-top:12px; list-style:none;"><li>✅ Add INR (sell USDT or add funds)</li><li>✅ Go to "Buy RP"</li><li>✅ Choose order (₹100, ₹500, ₹1000...)</li><li>✅ Click "Receive" → order starts</li><li>✅ Complete order → Profit added</li></ul><div class="example-box"><strong>📈 Profit:</strong> ₹100 order → ₹105 | ₹500 → ₹525 | ₹1000 → ₹1050</div></div></div></section>
-
-<div class="divider"></div>
-
-<section class="sec"><div class="fade-up"><div class="sec-tag">📊 Commission Structure</div><h2 class="sec-title">Order Revenue – <span>Per Order & 30 Days</span></h2>
-<div class="table-wrap"><table><thead><tr><th>Level</th><th>Order Amount</th><th>Commission/Order</th><th>X30 Revenue</th></tr></thead><tbody>
-<tr><td>L1</td><td>₹100</td><td>₹5</td><td style="color:#10b981;">₹150</td></tr>
-<tr><td>L2</td><td>₹300</td><td>₹12</td><td style="color:#10b981;">₹360</td></tr>
-<tr><td>L3</td><td>₹500</td><td>₹19</td><td style="color:#10b981;">₹570</td></tr>
-<tr><td>L4</td><td>₹1000</td><td>₹34</td><td style="color:#10b981;">₹1020</td></tr>
-<tr><td>L5</td><td>₹2000</td><td>₹64</td><td style="color:#10b981;">₹1920</td></tr>
-<tr><td>L6</td><td>₹3000</td><td>₹94</td><td style="color:#10b981;">₹2820</td></tr>
-<tr><td>L7</td><td>₹5000</td><td>₹154</td><td style="color:#10b981;">₹4620</td></tr>
-<tr><td>L8</td><td>₹10000</td><td>₹305</td><td style="color:#10b981;">₹9150</td></tr>
-</tbody></table></div>
-<p style="text-align:center;">✅ UPI Compatible: Paytm | Jio | PhonePe | Mobikwik | Freecharge</p>
-</section>
-
-<div class="divider"></div>
-
-<!-- PROOF SECTION - AUTO SLIDE CAROUSEL (PHONE SIZE) -->
-<section class="sec" id="proofs"><div class="fade-up"><div class="sec-tag">📸 REAL PROOFS & EARNINGS</div><h2 class="sec-title">Live <span>Payment Proofs</span> – Dashboard Screenshots</h2>
-<p class="sec-desc">नीचे सभी images OnePay real dashboard से ली गई हैं। ← → स्वाइप करें या अपने आप slide होगा।</p></div>
-
-<div class="proof-carousel-section fade-up">
-  <div class="carousel-container">
-    <div class="carousel-slides" id="proofSlides">
-      <div class="carousel-slide"><img src="https://i.ibb.co/35hy8Z7H/x.jpg" alt="Daily earnings"></div>
-      <div class="carousel-slide"><img src="https://i.ibb.co/YB3CqyCC/x.jpg" alt="Team rebates"></div>
-      <div class="carousel-slide"><img src="https://i.ibb.co/G4S5dZ1d/x.jpg" alt="Order revenue"></div>
-      <div class="carousel-slide"><img src="https://i.ibb.co/bjyR5mXT/x.jpg" alt="Sell RP record"></div>
-      <div class="carousel-slide"><img src="https://i.ibb.co/gZnhxC3p/x.jpg" alt="Daily bonus"></div>
-      <div class="carousel-slide"><img src="https://i.ibb.co/MxQz0PmK/x.jpg" alt="Purchase data"></div>
-      <div class="carousel-slide"><img src="https://i.ibb.co/NnbLJ2wK/x.jpg" alt="USDT recharge"></div>
-      <div class="carousel-slide"><img src="https://i.ibb.co/5XTrb4hf/x.jpg" alt="Team management"></div>
-      <div class="carousel-slide"><img src="https://i.ibb.co/4RvmR29T/x.jpg" alt="Points details"></div>
-      <div class="carousel-slide"><img src="https://i.ibb.co/SDwfmPFn/x.jpg" alt="Withholding collection"></div>
-      <div class="carousel-slide"><img src="https://i.ibb.co/qYCJqM99/x.jpg" alt="Daily rewards"></div>
-      <div class="carousel-slide"><img src="https://i.ibb.co/wZDQ4GkJ/x.jpg" alt="Team earnings"></div>
-      <div class="carousel-slide"><img src="https://i.ibb.co/7J9DcWzs/x.jpg" alt="Order completion"></div>
-      <div class="carousel-slide"><img src="https://i.ibb.co/1tBfkMhg/x.jpg" alt="Activity rewards"></div>
-      <div class="carousel-slide"><img src="https://i.ibb.co/FbRFDpd9/x.jpg" alt="Sell RP success"></div>
-      <div class="carousel-slide"><img src="https://i.ibb.co/ynBvNVgM/x.jpg" alt="Large transactions"></div>
-      <div class="carousel-slide"><img src="https://i.ibb.co/PZy4NxhB/x.jpg" alt="Team performance"></div>
-      <div class="carousel-slide"><img src="https://i.ibb.co/wFHbvCY0/x.jpg" alt="Daily details"></div>
-      <div class="carousel-slide"><img src="https://i.ibb.co/mCX17LhR/x.jpg" alt="Dashboard"></div>
+<div class="app-container">
+    <!-- status bar simulation (dark) -->
+    <div class="status-bar">
+        <span>8:07</span>
+        <span><i class="fas fa-signal"></i> <i class="fas fa-battery-full"></i></span>
     </div>
-    <button class="carousel-btn prev-proof" id="prevProofBtn">❮</button>
-    <button class="carousel-btn next-proof" id="nextProofBtn">❯</button>
-  </div>
-  <div class="carousel-dots" id="proofDots"></div>
-  <div class="proof-label">✅ Real Transaction Screenshot</div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo-area">
+            <span class="logo">OnePay</span>
+            <span class="tagline">USDT to INR | Buy RP</span>
+        </div>
+        <div class="nav-links">
+            <a href="#">Support</a>
+            <a href="#">Register</a>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="hero-badge"><i class="fas fa-bolt"></i> Instant Settlements</div>
+        <h1>USDT → INR <br> Best Rates</h1>
+        <p>Convert your crypto to Indian Rupees instantly. Lowest fees, real-time payouts.</p>
+        <div class="rate-card">
+            <div class="rate-label">Today's Live Rate</div>
+            <div class="dynamic-rate">
+                1 USDT = ₹106 <span>+ 0% fee promo</span>
+            </div>
+            <div class="rate-note">Best rate in market • No hidden charges</div>
+        </div>
+
+        <div class="btn-group">
+            <a href="#" class="btn-primary"><i class="fab fa-telegram-plane"></i> Trade Now</a>
+            <a href="#" class="btn-outline-light"><i class="fas fa-chart-line"></i> Get Rate Alert</a>
+        </div>
+    </div>
+
+    <!-- OFFICIAL CHANNEL PROMO CARD (black fixed version) - important area -->
+    <div style="padding: 0 20px;">
+        <div class="promo-card">
+            <div class="promo-header">
+                <div class="telegram-icon"><i class="fab fa-telegram-plane"></i></div>
+                <div>
+                    <div class="promo-title">Official Channel</div>
+                    <div style="font-size: 12px; color: #FBBF24;">★ Daily updates</div>
+                </div>
+            </div>
+            <div class="promo-desc">
+                Daily updates, best rates (₹106), tips aur offers pao! <strong>Join OnePay Channel</strong> for exclusive trading signals & price alerts.
+            </div>
+            <div class="chip-group">
+                <span class="chip"><i class="fas fa-chart-simple"></i> Live Rates</span>
+                <span class="chip"><i class="fas fa-gift"></i> Loyalty Bonus</span>
+                <span class="chip"><i class="fas fa-clock"></i> 24/7 Support</span>
+            </div>
+            <a href="#" class="join-channel-btn"><i class="fab fa-telegram"></i> Join OnePay Channel →</a>
+        </div>
+    </div>
+
+    <!-- features -->
+    <div style="padding: 0 20px;">
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fas fa-rocket"></i>
+                <h4>Instant USDT→INR</h4>
+                <p>Settle within 5 minutes via UPI/Bank</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-rupee-sign"></i>
+                <h4>Best Exchange Rate</h4>
+                <p>₹106 per USDT + zero withdrawal fee</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Secure & Trusted</h4>
+                <p>Escrow protected & KYC optional</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-headset"></i>
+                <h4>Dedicated Support</h4>
+                <p>Telegram priority support</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Steps: How to exchange -->
+    <div style="padding: 0 20px;">
+        <div class="steps-section">
+            <h3 style="margin-bottom: 18px; font-weight: 700; font-size: 22px; color: #FBBF24;"><i class="fas fa-exchange-alt"></i> How to convert USDT to INR</h3>
+            <div class="step-row">
+                <div class="step-num">1</div>
+                <div><div class="step-text">Register / Login to OnePay</div><div class="step-small">Via Telegram or one-pay.online</div></div>
+            </div>
+            <div class="step-row">
+                <div class="step-num">2</div>
+                <div><div class="step-text">Send USDT (TRC20/BEP20)</div><div class="step-small">Enter amount & receive live rate ₹106</div></div>
+            </div>
+            <div class="step-row">
+                <div class="step-num">3</div>
+                <div><div class="step-text">Get INR in your bank account</div><div class="step-small">UPI / IMPS / Paytm — instant payout</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- additional promo (Buy RP Earn) card -->
+    <div style="padding: 0 20px;">
+        <div class="promo-card" style="background: #0b0b12;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <div>
+                    <h3 style="color: #FBBF24; font-size: 20px;">Buy RP | Earn Rewards</h3>
+                    <p style="color: #cbd5e1; margin-top: 6px;">Purchase in-game RP (Valorant, Free Fire) using USDT with cashback.</p>
+                </div>
+                <i class="fas fa-gamepad" style="font-size: 44px; color: #F59E0B;"></i>
+            </div>
+            <div class="chip-group" style="margin-top: 12px;">
+                <span class="chip"><i class="fas fa-ticket-alt"></i> Up to 5% cashback</span>
+                <span class="chip"><i class="fas fa-bolt"></i> Instant Delivery</span>
+            </div>
+            <a href="#" class="join-channel-btn" style="margin-top: 15px; background: #F59E0B; color:#0a0a0f; border: none;"><i class="fas fa-cart-shopping"></i> Buy RP Now →</a>
+        </div>
+    </div>
+
+    <!-- FAQ section -->
+    <div style="padding: 0 20px;">
+        <div class="faq-section">
+            <div class="faq-q"><i class="fas fa-question-circle"></i> Is OnePay legal for USDT to INR conversion?</div>
+            <div class="faq-a">Yes, OnePay operates under legal compliance with transparent P2P & OTC desk. Transactions are legal in India for crypto-to-fiat conversion.</div>
+            <div class="faq-q"><i class="fas fa-clock"></i> How fast do I receive INR?</div>
+            <div class="faq-a">After USDT confirmation, INR is sent to your UPI/bank within 5-15 minutes, 24/7.</div>
+            <div class="faq-q"><i class="fas fa-chart-simple"></i> What's the current rate?</div>
+            <div class="faq-a">Currently 1 USDT = ₹106 INR (best price). Daily updates on official channel.</div>
+            <div class="faq-q"><i class="fas fa-user-check"></i> Do I need KYC?</div>
+            <div class="faq-a">For small trades (< ₹10,000) no KYC needed. Higher limits require basic verification.</div>
+        </div>
+    </div>
+
+    <!-- support & register footer -->
+    <div class="footer">
+        <div style="display: flex; justify-content: center; gap: 28px; margin-bottom: 16px;">
+            <a href="#"><i class="fab fa-telegram"></i> @OnePaySupport</a>
+            <a href="#"><i class="fas fa-user-plus"></i> Register</a>
+            <a href="#"><i class="fas fa-envelope"></i> Help</a>
+        </div>
+        <p>© 2025 OnePay – USDT to INR | Buy RP Earn. Real-time rates, secure exchange.</p>
+        <p style="margin-top: 12px; font-size: 11px;">one-pay.online | Daily updates, best rates (₹106), tips aur offers</p>
+    </div>
 </div>
-<div style="text-align:center; margin-top:10px; color:var(--muted);">👉 कुल 19+ रियल स्क्रीनशॉट – हर 4 सेकंड में अपने आप स्लाइड होगा</div>
-</section>
-
-<div class="divider"></div>
-
-<section class="sec"><div class="fade-up"><div class="sec-tag">📈 Charts & Analytics</div><h2 class="sec-title">Performance <span>Graphs</span> – Coming Soon</h2>
-<p class="sec-desc">यहाँ आप daily income chart, team growth chart लगा सकते हैं।</p>
-<div class="table-wrap" style="text-align:center; padding:40px;"><span style="font-size:3rem;">📊📈</span><p style="margin-top:12px;">🖼️ <strong>Chart placeholder</strong> – जल्द ही update होगा।</p></div>
-</section>
-
-<div class="divider"></div>
-
-<div class="support-bg" id="support"><div class="support-inner" style="max-width:1200px; margin:0 auto;"><div class="fade-up"><div class="sec-tag" style="background:rgba(255,255,255,0.2); color:#fff;">💬 24/7 Support</div><h2 class="sec-title" style="color:#fff;">Hum Hain <span style="-webkit-text-fill-color:#93c5fd;">Har Qadam Par</span></h2></div>
-<div class="support-grid fade-up"><div class="sup-card"><div class="sup-ico" style="font-size:2rem;">💬</div><h3>Personal Support</h3><p>Direct Telegram par expert se baat karein. Fast solution 24/7.</p><a href="https://t.me/Hiii_AMAN" class="sup-link" target="_blank">✈️ @Hiii_AMAN</a></div>
-<div class="sup-card"><div class="sup-ico" style="font-size:2rem;">📢</div><h3>Official Channel</h3><p>Daily updates, best rates (₹106), tips aur offers pao!</p><a href="https://t.me/OnePay_SO_Easy" class="sup-link" target="_blank">✈️ Join OnePay Channel</a></div></div></div></div>
-
-<div id="join" style="text-align:center; padding:70px 5%; background:var(--bg);"><div class="sec-tag" style="display:inline-block;">🚀 Limited Offer</div><h2>Aaj Hi Join Karein aur <span style="color:var(--green);">Real Earnings</span> Start Karein!</h2>
-<p>USDT sell karein, RP se profit karein, aur direct bank mein paisa receive karein। हजारों यूज़र्स पहले से कमा रहे हैं।</p>
-<div class="cta-btns" style="display:flex; gap:18px; justify-content:center; margin-top:30px;"><a href="https://land.onexx.top?inviteCode=IyGZ8v" class="btn-blue" target="_blank">💰 Register Now (Invite: IyGZ8v)</a><a href="https://t.me/OnePay_SO_Easy" class="btn-tg" target="_blank">✈️ Telegram Channel</a></div></div>
-
-<footer><div class="footer-inner"><div class="footer-brand"><img src="https://i.ibb.co/99sczMNx/x.jpg" alt="OnePay"><p>India's fastest USDT to INR exchange + Buy RP earning platform.</p></div><div class="fcol"><h4>Quick Links</h4><ul><li><a href="#usdt-sell">USDT Sell</a></li><li><a href="#buy-rp">Buy RP</a></li><li><a href="#proofs">Real Proofs</a></li></ul></div><div class="fcol"><h4>Support</h4><ul><li><a href="https://t.me/Hiii_AMAN">Telegram Support</a></li><li><a href="https://t.me/OnePay_SO_Easy">Official Channel</a></li></ul></div></div><div class="footer-btm" style="max-width:1200px; margin:28px auto 0; text-align:center; border-top:1px solid rgba(255,255,255,0.1); padding-top:20px;"><p>© 2025 OnePay — USDT to INR & RP Earning Platform. Real dashboard proofs attached.</p></div></footer>
-
-<div class="float-btns"><a href="https://t.me/Hiii_AMAN" class="f-tg" target="_blank">💬 Support</a><a href="https://land.onexx.top?inviteCode=IyGZ8v" class="f-sell" target="_blank">💰 Register</a></div>
-
-<script>
-function toggleMenu(){document.getElementById('navLinks').classList.toggle('open');}
-document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open'));});
-const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:0.1});
-document.querySelectorAll('.fade-up').forEach((el,i)=>{el.style.transitionDelay=(i%5)*0.07+'s';io.observe(el);});
-
-// Proof Carousel Auto Slide
-const slides = document.querySelectorAll('.carousel-slide');
-const slidesContainer = document.getElementById('proofSlides');
-const prevBtn = document.getElementById('prevProofBtn');
-const nextBtn = document.getElementById('nextProofBtn');
-const dotsContainer = document.getElementById('proofDots');
-let currentIndex = 0;
-const totalSlides = slides.length;
-let autoInterval;
-
-function updateCarousel() {
-  slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-  document.querySelectorAll('.carousel-dot').forEach((dot, idx) => {
-    dot.classList.toggle('active', idx === currentIndex);
-  });
-}
-function createDots() {
-  dotsContainer.innerHTML = '';
-  for (let i = 0; i < totalSlides; i++) {
-    const dot = document.createElement('div');
-    dot.classList.add('carousel-dot');
-    if (i === currentIndex) dot.classList.add('active');
-    dot.addEventListener('click', () => { currentIndex = i; updateCarousel(); resetAutoSlide(); });
-    dotsContainer.appendChild(dot);
-  }
-}
-function nextSlide() { currentIndex = (currentIndex + 1) % totalSlides; updateCarousel(); }
-function prevSlide() { currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; updateCarousel(); }
-function startAutoSlide() { autoInterval = setInterval(nextSlide, 4000); }
-function resetAutoSlide() { clearInterval(autoInterval); startAutoSlide(); }
-nextBtn.addEventListener('click', () => { nextSlide(); resetAutoSlide(); });
-prevBtn.addEventListener('click', () => { prevSlide(); resetAutoSlide(); });
-createDots();
-updateCarousel();
-startAutoSlide();
-</script>
 </body>
 </html>
