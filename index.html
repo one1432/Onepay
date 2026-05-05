@@ -11,7 +11,7 @@
   --surface:#ffffff;--surface2:rgba(255,255,255,0.85);
   --b1:#1a56db;--b2:#1e40af;--b3:#3b82f6;--b4:#60a5fa;--b5:#dbeafe;
   --accent:#0ea5e9;--green:#10b981;--red:#ef4444;--gold:#f59e0b;
-  --text:#0f172a;--text2:#334155;--muted:#64748b;
+  --text:#0f172a;--text2:#1e293b;--muted:#475569;
   --border:rgba(59,130,246,0.18);
   --shadow:0 4px 30px rgba(26,86,219,0.1);
   --shadow2:0 20px 60px rgba(26,86,219,0.18);
@@ -61,14 +61,14 @@ th{background:var(--b5);color:var(--b1);font-weight:800;}
 .support-bg .sec-title{color:#fff;}
 .support-bg .sec-desc{color:#bfdbfe;}
 .support-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:1200px;margin:0 auto;}
-.sup-card{background:rgba(255,255,255,0.11);border-radius:20px;padding:30px;backdrop-filter:blur(12px);}
-.sup-card h3{color:#fff;margin-bottom:8px;}
-.sup-card p{color:#bfdbfe;}
-.sup-link{display:inline-flex;background:#fff;color:var(--b1);padding:10px 22px;border-radius:40px;text-decoration:none;font-weight:800;margin-top:12px;}
+.sup-card{background:rgba(255,255,255,0.95);border-radius:20px;padding:30px;backdrop-filter:blur(12px);border:1px solid rgba(0,0,0,0.08);}
+.sup-card h3{color:var(--text);margin-bottom:8px;}
+.sup-card p{color:var(--text2);}
+.sup-link{display:inline-flex;background:linear-gradient(135deg,var(--b1),var(--accent));color:#fff;padding:10px 22px;border-radius:40px;text-decoration:none;font-weight:800;margin-top:12px;}
 footer{background:var(--text);color:#fff;padding:46px 5% 28px;}
 .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;}
 .footer-brand img{height:32px;filter:brightness(0) invert(1);}
-.fcol h4{color:#94a3b8;}
+.fcol h4{color:#cbd5e1;}
 .fcol a{color:#cbd5e1;text-decoration:none;font-size:0.8rem;}
 .fcol a:hover{color:#60a5fa;}
 .float-btns{position:fixed;bottom:26px;right:20px;z-index:999;display:flex;flex-direction:column;gap:12px;}
@@ -137,13 +137,14 @@ footer{background:var(--text);color:#fff;padding:46px 5% 28px;}
 <tr><td>L6</td><td>₹3000</td><td>₹94</td><td style="color:#10b981;">₹2820</td></tr>
 <tr><td>L7</td><td>₹5000</td><td>₹154</td><td style="color:#10b981;">₹4620</td></tr>
 <tr><td>L8</td><td>₹10000</td><td>₹305</td><td style="color:#10b981;">₹9150</td></tr>
-</tbody></table></div>
+</tbody>
+</table>
 <p style="text-align:center; color:var(--text2);">✅ UPI Compatible: Paytm | Jio | PhonePe | Mobikwik | Freecharge</p>
 </section>
 
 <div class="divider"></div>
 
-<!-- PROOF SECTION - AUTO SLIDE CAROUSEL (PHONE SIZE) -->
+<!-- PROOF SECTION - AUTO SLIDE CAROUSEL -->
 <section class="sec" id="proofs"><div class="fade-up"><div class="sec-tag">📸 REAL PROOFS & EARNINGS</div><h2 class="sec-title">Live <span>Payment Proofs</span> – Dashboard Screenshots</h2>
 <p class="sec-desc">नीचे सभी images OnePay real dashboard से ली गई हैं। ← → स्वाइप करें या अपने आप slide होगा।</p></div>
 
@@ -181,16 +182,10 @@ footer{background:var(--text);color:#fff;padding:46px 5% 28px;}
 
 <div class="divider"></div>
 
-<section class="sec"><div class="fade-up"><div class="sec-tag">📈 Charts & Analytics</div><h2 class="sec-title">Performance <span>Graphs</span> – Coming Soon</h2>
-<p class="sec-desc">यहाँ आप daily income chart, team growth chart लगा सकते हैं।</p>
-<div class="table-wrap" style="text-align:center; padding:40px;"><span style="font-size:3rem;">📊📈</span><p style="margin-top:12px; color:var(--text2);">🖼️ <strong>Chart placeholder</strong> – जल्द ही update होगा।</p></div>
-</section>
-
-<div class="divider"></div>
-
-<div class="support-bg" id="support"><div class="support-inner" style="max-width:1200px; margin:0 auto;"><div class="fade-up"><div class="sec-tag" style="background:rgba(255,255,255,0.2); color:#fff;">💬 24/7 Support</div><h2 class="sec-title" style="color:#fff;">Hum Hain <span style="-webkit-text-fill-color:#93c5fd;">Har Qadam Par</span></h2></div>
-<div class="support-grid fade-up"><div class="sup-card"><div class="sup-ico" style="font-size:2rem;">💬</div><h3>Personal Support</h3><p>Direct Telegram par expert se baat karein. Fast solution 24/7.</p><a href="https://t.me/Hiii_AMAN" class="sup-link" target="_blank">✈️ @Hiii_AMAN</a></div>
-<div class="sup-card"><div class="sup-ico" style="font-size:2rem;">📢</div><h3>Official Channel</h3><p>Daily updates, best rates (₹106), tips aur offers pao!</p><a href="https://t.me/OnePay_SO_Easy" class="sup-link" target="_blank">✈️ Join OnePay Channel</a></div></div></div></div>
+<!-- SUPPORT SECTION - BLACK TEXT ON WHITE BACKGROUND -->
+<div class="support-bg" id="support"><div class="support-inner" style="max-width:1200px; margin:0 auto;"><div class="fade-up"><div class="sec-tag" style="background:rgba(255,255,255,0.3); color:var(--b1);">💬 24/7 Support</div><h2 class="sec-title" style="color:var(--text);">Hum Hain <span style="color:var(--b1);">Har Qadam Par</span></h2></div>
+<div class="support-grid fade-up"><div class="sup-card"><div class="sup-ico" style="font-size:2rem;">💬</div><h3>Personal Support</h3><p>Direct Telegram par expert se baat karein. Fast solution 24/7 available.</p><a href="https://t.me/Hiii_AMAN" class="sup-link" target="_blank">✈️ @Hiii_AMAN</a></div>
+<div class="sup-card"><div class="sup-ico" style="font-size:2rem;">📢</div><h3>Official Channel</h3><p>Daily updates, best rates (₹106), tips aur exclusive offers pao!</p><a href="https://t.me/OnePay_SO_Easy" class="sup-link" target="_blank">✈️ Join OnePay Channel</a></div></div></div></div>
 
 <div id="join" style="text-align:center; padding:70px 5%; background:var(--bg);"><div class="sec-tag" style="display:inline-block;">🚀 Limited Offer</div><h2 style="color:var(--text);">Aaj Hi Join Karein aur <span style="color:var(--green);">Real Earnings</span> Start Karein!</h2>
 <p style="color:var(--text2);">USDT sell karein, RP se profit karein, aur direct bank mein paisa receive karein। हजारों यूज़र्स पहले से कमा रहे हैं।</p>
